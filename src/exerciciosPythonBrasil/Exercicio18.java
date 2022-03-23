@@ -15,5 +15,5 @@ public class Exercicio18 {
 
         System.out.print("O tempo aproximado de Download é de: " + tempoAproxDeDownloadEmMinutos + " " + "minutos.");
 
-        scanner.close();
+        scanner.close();//
     }}
