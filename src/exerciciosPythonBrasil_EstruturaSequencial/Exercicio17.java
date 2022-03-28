@@ -36,6 +36,6 @@ public class Exercicio17 {
         double precoTesteTotal = precoTesteGaloes + precoTesteLatas;
         System.out.println("Se misturar latas e galões ficam " + latasDaMisturaArredondado + " " + "latas e" + " " + galoesDaMisturaArredondado + " " + "galões.");
         System.out.println("O preço pago misturando latas e galões é de: R$" + precoTesteTotal);
-        scanner.close();
+        scanner.close();//
     }
 }
