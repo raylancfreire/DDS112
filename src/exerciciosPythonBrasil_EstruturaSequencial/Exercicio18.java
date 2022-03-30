@@ -7,10 +7,11 @@ public class Exercicio18 {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Informe o tamanho do arquivo em MB: ");
         double tamanhoDoArquivo = scanner.nextDouble();
-        System.out.print("Informe a velocidade de download em Mbps: ");
+        System.out.print("Informe a velocidade do Link de Internet em Mbps: ");
         double velocidadeDoLinkDeInternet = scanner.nextDouble();
         byte fatorDeConversaoEmSegundos = 8;
-        double tempoAproximadoDeDownloadEmSegundos = tamanhoDoArquivo / (velocidadeDoLinkDeInternet / fatorDeConversaoEmSegundos);
+        double velocidadeDoLinkDeInternetEmSegundos = velocidadeDoLinkDeInternet / fatorDeConversaoEmSegundos;
+        double tempoAproximadoDeDownloadEmSegundos = tamanhoDoArquivo / velocidadeDoLinkDeInternetEmSegundos;
         byte fatorDeConversaoEmMinutos = 60;
         double tempoAproximadoDeDownloadEmMinutos = tempoAproximadoDeDownloadEmSegundos / fatorDeConversaoEmMinutos;
         System.out.print("O tempo aproximado de Download é de: " + tempoAproximadoDeDownloadEmMinutos + " minutos.");
