@@ -31,11 +31,11 @@ public class Exercicio17 {
         double galoesDaMistura = galoesComplementares / capacidadeGalaoDeTinta;
         double latasDaMisturaArredondado = Math.floor(latasDaMistura);
         double galoesDaMisturaArredondado = Math.ceil(galoesDaMistura);
-        double precoTesteLatas = latasDaMistura * valorLataDeTinta;
-        double precoTesteGaloes = galoesDaMistura * valorGalaoDeTinta;
+        double precoTesteLatas = latasDaMisturaArredondado * valorLataDeTinta;
+        double precoTesteGaloes = galoesDaMisturaArredondado * valorGalaoDeTinta;
         double precoTesteTotal = precoTesteGaloes + precoTesteLatas;
         System.out.println("Se misturar latas e galões ficam " + latasDaMisturaArredondado + " " + "latas e" + " " + galoesDaMisturaArredondado + " " + "galões.");
-        System.out.println("O preço pago misturando latas e galões é de: R$" + precoTesteTotal);
-        scanner.close();//////////////
+        System.out.println("O preço pago misturando latas e galões (Com acréscimo de 10%) é de: R$" + precoTesteTotal);
+        scanner.close();
     }
 }
