@@ -12,11 +12,11 @@ public class Exercicio08 {
         System.out.print("Informe o preço de mais um produto: ");
         double terceiroProduto = scanner.nextDouble();
         if (primeiroProduto < segundoProduto && primeiroProduto < terceiroProduto) {
-            System.out.print("O menor número é: " + primeiroProduto);
+            System.out.print("Você deve optar pelo primeiro produto, pois é o mais barato e custa: R$" + primeiroProduto);
         }else if(segundoProduto < primeiroProduto && segundoProduto < terceiroProduto){
-            System.out.print("O menor número é: " + segundoProduto);
+            System.out.print("Você deve optar pelo primeiro produto, pois é o mais barato e custa: R$" + segundoProduto);
         }else{
-            System.out.print("O menor número é: " + terceiroProduto);
+            System.out.print("Você deve optar pelo primeiro produto, pois é o mais barato e custa: R$" + terceiroProduto);
         }
     }
 }

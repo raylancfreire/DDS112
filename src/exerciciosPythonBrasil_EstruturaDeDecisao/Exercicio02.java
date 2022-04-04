@@ -8,8 +8,9 @@ public class Exercicio02 {
         System.out.print("Digite um número: ");
         double numeroInformado = scanner.nextDouble();
         byte zero = 0;
+        boolean oNumeroEPositivo = numeroInformado > zero;
 
-        if (numeroInformado > zero) {
+        if (oNumeroEPositivo) {
             System.out.println("O número é " + numeroInformado + " " + "é positivo");
         } else {
             System.out.println("O número é " + numeroInformado + " " + "é negativo");

@@ -9,8 +9,9 @@ public class Exercicio01 {
         double primeiroNumero = scanner.nextDouble();
         System.out.print("Digite outro número: ");
         double segundoNumero = scanner.nextDouble();
+        boolean maiorNumero = primeiroNumero > segundoNumero;
 
-        if (primeiroNumero > segundoNumero) {
+        if (maiorNumero) {
             System.out.println("O maior número é: " + primeiroNumero);
         } else {
             System.out.println("O maior número é: " + segundoNumero);
