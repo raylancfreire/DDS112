@@ -5,20 +5,22 @@ import java.util.Scanner;
 public class Exercicio05 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Digite a primeira nota:   ");
+        System.out.print("Digite a primeira nota: ");
         double primeiraNota = scanner.nextDouble();
-        System.out.println("Digite a segunda nota:   ");
+        System.out.print("Digite a segunda nota: ");
         double segundaNota = scanner.nextDouble();
         byte quantidadeDeNotas = 2;
         double somaDeNotas = primeiraNota + segundaNota;
         double media = somaDeNotas / quantidadeDeNotas;
         byte mediaSete = 7;
         byte mediaDez = 10;
-        if (media >= mediaDez) {
+        boolean aprovado = media >= mediaSete;
+        boolean aprovadoComDistincao = media >= mediaDez;
+        if (aprovadoComDistincao) {
             System.out.print(("Você foi aprovado com distinção"));
-        } else if  (media > mediaSete) {
+        } else if  (aprovado) {
             System.out.print("Você passou de ano");
-        } else if (media < mediaSete) {
+        } else {
             System.out.print("Você foi reprovado");
         }
     }

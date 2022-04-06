@@ -10,7 +10,6 @@ public class Exercicio11 {
         int duzentosEOitentaReais = 280;
         int setecentosReais = 700;
         int milEQuinhentosReais = 1500;
-
         if (salario <= duzentosEOitentaReais) {
             double vintePorCento = 0.2;
             double vintePorCentoDoSalario = salario * vintePorCento;

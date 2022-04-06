@@ -16,7 +16,6 @@ public class Exercicio14 {
         byte mediaSeis = 6;
         double mediaSeteVirgulaCinco = 7.5;
         byte mediaNove = 9;
-
         if (media >= mediaNove) {
             System.out.println("Primera nota: " + primeiraNota);
             System.out.println("Segunda nota: " + segundaNota);

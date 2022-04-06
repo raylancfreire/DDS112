@@ -11,9 +11,11 @@ public class Exercicio06 {
         double segundoNumero = scanner.nextDouble();
         System.out.print("Digite mais um número: ");
         double terceiroNumero = scanner.nextDouble();
-        if (primeiroNumero > segundoNumero && primeiroNumero > terceiroNumero) {
+        boolean primeirNumeroMaior = primeiroNumero > segundoNumero && primeiroNumero > terceiroNumero;
+        boolean segundoNumeroMaior = segundoNumero > primeiroNumero && segundoNumero > terceiroNumero;
+        if (primeirNumeroMaior) {
             System.out.print("O maior número é: " + primeiroNumero);
-        }else if(segundoNumero > primeiroNumero && segundoNumero > terceiroNumero){
+        }else if(segundoNumeroMaior){
             System.out.print("O maior número é: " + segundoNumero);
         }else{
             System.out.print("O maior número é: " + terceiroNumero);

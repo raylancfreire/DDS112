@@ -13,7 +13,6 @@ public class Exercicio12 {
         int novecentosReais = 900;
         int milEQuinhetosReais = 1500;
         int doisMilEQuinhentosReais = 2500;
-
         if (salarioBruto <= novecentosReais) {
             double taxaImpostoDeRenda = 0;
             double taxaInss = 0.1;

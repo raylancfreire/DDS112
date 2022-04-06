@@ -11,17 +11,15 @@ public class Exercicio15 {
         double segundoLado = scanner.nextDouble();
         System.out.print("Informe o valor do outro lado do triângulo: ");
         double terceiroLado = scanner.nextDouble();
-
-        if (primeiroLado == segundoLado && primeiroLado == terceiroLado && segundoLado == terceiroLado) {
-            System.out.print("O triângulo informado é Equilátero");
-        } else if (primeiroLado == segundoLado) {
-            System.out.print("O triângulo informado é Isósceles");
-        } else if (primeiroLado == terceiroLado) {
-            System.out.print("O triângulo informado é Isósceles");
-        } else if (segundoLado == terceiroLado) {
-            System.out.print("O triângulo informado é Isósceles");
+        boolean naoEUmTriangulo = primeiroLado + segundoLado < terceiroLado || primeiroLado + terceiroLado < segundoLado || segundoLado + terceiroLado < primeiroLado;
+        if (naoEUmTriangulo) {
+            System.out.print("Não é um triângulo.");
+        } else if (primeiroLado == segundoLado && primeiroLado == terceiroLado) {
+            System.out.print("O triângulo informado é Equilátero.");
+        } else if (primeiroLado == segundoLado || primeiroLado == terceiroLado || segundoLado == terceiroLado) {
+            System.out.print("O triângulo informado é Isósceles.");
         } else {
-            System.out.print("O triângulo informado é Escaleno");
+            System.out.print("O triângulo informado é Escaleno.");
         }
     }
 }
