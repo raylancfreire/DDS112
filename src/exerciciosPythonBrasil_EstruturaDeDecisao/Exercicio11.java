@@ -10,7 +10,10 @@ public class Exercicio11 {
         int duzentosEOitentaReais = 280;
         int setecentosReais = 700;
         int milEQuinhentosReais = 1500;
-        if (salario <= duzentosEOitentaReais) {
+        boolean menorOuIgualADuzentosEOitentaReais = salario <= duzentosEOitentaReais;
+        boolean maiorQueDuzentosEOitentaReaisEMenorQueSetecentosReais = salario > duzentosEOitentaReais && salario < setecentosReais;
+        boolean maiorQueSetecentosReaisEMenorQueMilEQuinhentosReais = salario > setecentosReais && salario < milEQuinhentosReais;
+        if (menorOuIgualADuzentosEOitentaReais) {
             double vintePorCento = 0.2;
             double vintePorCentoDoSalario = salario * vintePorCento;
             double novoSalario = salario + vintePorCentoDoSalario;
@@ -18,7 +21,7 @@ public class Exercicio11 {
             System.out.println("Aumento de 20%");
             System.out.println("Valor do Aumento: R$" + vintePorCentoDoSalario);
             System.out.print("Seu novo Salário é: R$" + novoSalario);
-        } else if (salario > duzentosEOitentaReais && salario < setecentosReais) {
+        } else if (maiorQueDuzentosEOitentaReaisEMenorQueSetecentosReais) {
             double quinzePorCento = 0.15;
             double quinzePorCentoDoSalario = salario * quinzePorCento;
             double novoSalario = salario + quinzePorCentoDoSalario;
@@ -26,7 +29,7 @@ public class Exercicio11 {
             System.out.println("Aumento de 15%");
             System.out.println("Valor do Aumento: R$" + quinzePorCentoDoSalario);
             System.out.print("Seu novo Salário é: R$" + novoSalario);
-        } else if (salario > setecentosReais && salario < milEQuinhentosReais) {
+        } else if (maiorQueSetecentosReaisEMenorQueMilEQuinhentosReais) {
             double dezPorCento = 0.1;
             double dezPorCentoDoSalario = salario * dezPorCento;
             double novoSalario = salario + dezPorCentoDoSalario;

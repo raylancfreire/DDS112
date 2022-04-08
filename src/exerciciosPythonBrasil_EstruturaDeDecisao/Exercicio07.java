@@ -11,9 +11,11 @@ public class Exercicio07 {
         double segundoNumero = scanner.nextDouble();
         System.out.print("Digite mais um número: ");
         double terceiroNumero = scanner.nextDouble();
-        if (primeiroNumero < segundoNumero && primeiroNumero < terceiroNumero) {
+        boolean primeiroNumeroMenor = primeiroNumero < segundoNumero && primeiroNumero < terceiroNumero;
+        boolean segundoNumeroMenor = segundoNumero < primeiroNumero && segundoNumero < terceiroNumero;
+        if (primeiroNumeroMenor) {
             System.out.print("O menor número é: " + primeiroNumero);
-        }else if(segundoNumero < primeiroNumero && segundoNumero < terceiroNumero){
+        }else if(segundoNumeroMenor){
             System.out.print("O menor número é: " + segundoNumero);
         }else{
             System.out.print("O menor número é: " + terceiroNumero);

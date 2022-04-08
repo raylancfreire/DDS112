@@ -13,7 +13,10 @@ public class Exercicio12 {
         int novecentosReais = 900;
         int milEQuinhetosReais = 1500;
         int doisMilEQuinhentosReais = 2500;
-        if (salarioBruto <= novecentosReais) {
+        boolean salarioBrutoMaiorMenorOuIgualANovecentosReais = salarioBruto <= novecentosReais;
+        boolean salarioBrutoMenorQueNovecentosEMenorOuIgualAMilEQuinhentosReais = salarioBruto > novecentosReais && salarioBruto <= milEQuinhetosReais;
+        boolean salarioBrutoMaiorQueMilEQuinhentosEMenorOuIgualADoisMilEQuinhentosReais = salarioBruto > milEQuinhetosReais && salarioBruto <= doisMilEQuinhentosReais;
+        if (salarioBrutoMaiorMenorOuIgualANovecentosReais) {
             double taxaImpostoDeRenda = 0;
             double taxaInss = 0.1;
             double taxaFgts = 0.11;
@@ -28,7 +31,7 @@ public class Exercicio12 {
             System.out.println("FGTS (11%): " + fgts);
             System.out.println("Total de descontos: R$" + descontos);
             System.out.print("Salário Líquido: " + salarioLiquido);
-        } else if (salarioBruto > novecentosReais && salarioBruto <= milEQuinhetosReais) {
+        } else if (salarioBrutoMenorQueNovecentosEMenorOuIgualAMilEQuinhentosReais) {
             double taxaImpostoDeRenda = 0.05;
             double taxaInss = 0.1;
             double taxaFgts = 0.11;
@@ -43,7 +46,7 @@ public class Exercicio12 {
             System.out.println("FGTS (11%): " + fgts);
             System.out.println("Total de descontos: R$" + descontos);
             System.out.print("Salário Líquido: " + salarioLiquido);
-        } else if (salarioBruto > milEQuinhetosReais && salarioBruto <= doisMilEQuinhentosReais) {
+        } else if (salarioBrutoMaiorQueMilEQuinhentosEMenorOuIgualADoisMilEQuinhentosReais) {
             double taxaImpostoDeRenda = 0.1;
             double taxaInss = 0.1;
             double taxaFgts = 0.11;
