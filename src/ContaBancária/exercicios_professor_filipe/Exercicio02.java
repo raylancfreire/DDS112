@@ -5,9 +5,10 @@ import java.util.Scanner;
 public class Exercicio02 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Calculadora básica");
         System.out.print("Digite o primeiro número: ");
         Double primeiroNumero = scanner.nextDouble();
-        System.out.print("Operações: Para soma digite (1), Para subtração digite (2), Para multiplicação digite (3), Para divisão digite (4)");
+        System.out.print("Operações: Para soma digite (1), Para subtração digite (2), Para multiplicação digite (3), Para divisão digite (4): ");
         Integer operacao = scanner.nextInt();
         System.out.print("Digite o segundo número: ");
         Double segundoNumero = scanner.nextDouble();
@@ -24,7 +25,7 @@ public class Exercicio02 {
         if (operacao.equals(4)) {
             resultado = primeiroNumero / segundoNumero;
         }
-        System.out.println("Resultado: " + resultado);
+        System.out.println("O resultado da operação é: " + resultado);
         scanner.close();
     }
 }
