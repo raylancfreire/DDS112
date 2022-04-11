@@ -8,15 +8,15 @@ public class Exercicio18 {
         System.out.println("Informe uma data válida no formato dd/mm/aaaa");
         System.out.print("Informe o dia: ");
         byte dia = scanner.nextByte();
-        boolean diaValido = dia >= 01 && dia <= 31;
+        boolean diaValido = dia >= 1 && dia <= 31;
         if (diaValido)
             System.out.print("Informe o mês: ");
             byte mes = scanner.nextByte();
-            boolean mesValido = mes >= 01 && mes <= 12;
+            boolean mesValido = mes >= 1 && mes <= 12;
             if (mesValido)
                 System.out.print("Informe o ano: ");
                 int ano = scanner.nextInt();
-                boolean anoValido = ano >= 01 && ano <= 16000;
+                boolean anoValido = ano >= 1 && ano <= 16000;
                 if (anoValido)
                     System.out.print("A data informada é: " + dia + "/" + mes + "/" + ano);
                 else

@@ -19,7 +19,6 @@ public class Exercicio16 {
             byte fatorFormulaDeDelta = 4;
             byte fatorFormulaDeBhaskara = 2;
             double delta = variavelB * variavelB - (fatorFormulaDeDelta * variavelA * variavelC);
-
             if (delta < zero) {
                 System.out.print("A equação não possui raízes reais, pois o delta é negativo.");
             } else if (delta == zero) {
