@@ -7,11 +7,9 @@ public class Exercicio13 {
         Scanner scanner = new Scanner(System.in);
         imprimirTraco();
         String[] cursos = new String[] {"Java EE", "Spring", "Java OO Avançado"};
-        System.out.println("Escolha dentre os cursos abaixo: ");
-        for(int i = 0; i < cursos.length; i++) {
-            System.out.println("[" + i + "] " + cursos[i]);
-        }
-        System.out.print("O curso que você deseja é o: ");
+        imprimir("Escolha dentre os cursos abaixo: ");
+        iterarEExibirPosicoesDoVetorString(cursos);
+        imprimirEContinuarMesmaLinha("O curso que você deseja é o: ");
         Integer posicaoCursoEscolhido = scanner.nextInt();
         Boolean posicaoValida = posicaoCursoEscolhido >= 0 && posicaoCursoEscolhido < cursos.length;
         if (!posicaoValida) {
@@ -20,9 +18,7 @@ public class Exercicio13 {
         imprimirTraco();
         String[] formasPagamento = new String[] {"Cartão", "Boleto"};
         System.out.println("Escolha dentre as formas de pagamento abaixo: ");
-        for(int i = 0; i < formasPagamento.length; i++) {
-            System.out.println("[" + i + "] " + formasPagamento[i]);
-        }
+        iterarEExibirPosicoesDoVetorString(formasPagamento);
         System.out.print("Sua forma de pagamento escolhida é: ");
         Integer posicaoFormaPagamentoEscolhida = scanner.nextInt();
         posicaoValida = posicaoFormaPagamentoEscolhida >= 0 && posicaoFormaPagamentoEscolhida < formasPagamento.length;
@@ -35,11 +31,22 @@ public class Exercicio13 {
         System.out.println("O curso escolhido foi " + cursoEscolhido + " e a forma de pagamento é " + formaPagamentoEscolhida);
         scanner.close();
     }
+    static void iterarEExibirPosicoesDoVetorString(String[] vetor) {
+        for(int i = 0; i < vetor.length; i++) {
+            System.out.println("[" + i + "] " + vetor[i]);
+        }
+    }
     static void imprimirTraco() {
         System.out.println("----------------------------------------------");
     }
     static void encerrarProgramaPorCausaDePosicaoInvalida() {
         System.err.println("Posição inválida!");
         System.exit(1);
+    }
+    static void imprimir(String texto) {
+        System.out.println(texto);
+    }
+    static void imprimirEContinuarMesmaLinha(String texto) {
+        System.out.print(texto);
     }
 }
